@@ -1,0 +1,12 @@
+name: Capstone
+title:
+username:
+account: jinkwanh
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 814393
+bundleId: 1965492
+url: https://jinkwanh.shinyapps.io/Capstone/
+when: 1553599646.3574
+asMultiple: FALSE
+asStatic: FALSE
