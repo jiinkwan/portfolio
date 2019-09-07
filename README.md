@@ -2,4 +2,5 @@
 
 This document is to demonstrate the acquired skill-sets.
 
-1. Freelancer / Client Matching Service Funnel Analysis
+1. Data Analytics/Funnel Data Cleansing.ipynb: Freelancer / Client Matching Service Funnel Data Cleaning
+
