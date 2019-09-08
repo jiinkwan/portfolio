@@ -1,0 +1,58 @@
+SELECT  FMS1.MENU_NAME                      "BASIC_MENU",
+        FMS1.USER_MENU_NAME                 "USER_MENU_NAME",
+        FMS1.DESCRIPTION                    "BASIC_DESC",
+        MND.M_ENTRY_SEQUENCE                "SEQ",
+        FME.PROMPT                           "PROMPT",
+        FMS2.USER_MENU_NAME                 "USER_SUB_NAME",
+        FMS2.MENU_NAME                      "SUBMENU_KEY",
+        FFF.USER_FUNCTION_NAME              "USER_FUNCTION",
+        FFF.FUNCTION_NAME                   "FUNCTION_KEY",
+        FME.DESCRIPTION                     "DESCRIPTION" ,
+        FFV.FORM_NAME                       "FORM_NAME",
+        FMS1.CREATION_DATE
+  FROM  FND_FORM_VL                         ffv,
+        FND_FORM_FUNCTIONS_VL               FFF,
+        FND_MENU_ENTRIES_TL                 FME,
+        FND_MENUS_VL                        FMS1, 
+        FND_MENUS_VL                        FMS2,
+         (SELECT  ROWNUM                    M_SEQ,
+                  LEVEL                     M_LEVEL,
+                  MENU_ID                   M_MENU_ID,
+                  ENTRY_SEQUENCE            M_ENTRY_SEQUENCE,
+                  SUB_MENU_ID               M_SUB_MENU_ID,
+                  FUNCTION_ID               M_FUNCTION_ID
+            FROM  FND_MENU_ENTRIES       
+           WHERE  LEVEL                  <  10
+           START  WITH  MENU_ID      IN
+                 (SELECT MENU_ID
+                    FROM FND_MENUS
+                   WHERE MENU_NAME   in  ('ALR_OAM_NAV_GUI'
+,'AR_CUSTOMERS_GUI'
+,'FND_DEVNAVIGATE4.0'
+,'GL_SUPERUSER'
+,'HRMS_NOVELIS_SU_MENU'
+,'INV_NAVIGATE'
+,'JA_KR_AP_NAVIGATE_GUI'
+,'JA_KR_AR_NAVIGATE_GUI'
+,'JA_KR_FA_NAVIGATE_GUI'
+,'KR_HRMS_PAY_NAV_SUB01'
+,'NINV_INTERPLANT_MAIN'
+,'NINV_USER_MAIN'
+,'NINV_VIEWER_MAIN'
+,'NOV_AR_MENU_TYPE_12'
+,'NOV_CHANGE_ORG'
+,'NOV_INV_TRANSACTIONS_2'
+,'NOV_KR_TR_MENU'
+,'OM_PACKING_CONTROLLER_USER_GUI'
+,'ONT_SUPER_USER'
+,'PO_SUPERUSER_GUI'))
+         CONNECT  BY  MENU_ID            =  PRIOR SUB_MENU_ID ) MND
+ WHERE  FMS1.MENU_ID(+)                  =  MND.M_MENU_ID
+   AND  FMS2.MENU_ID(+)                  =  MND.M_SUB_MENU_ID
+   AND  FME.MENU_ID(+)                   =  MND.M_MENU_ID
+   AND  FME.ENTRY_SEQUENCE(+)            =  MND.M_ENTRY_SEQUENCE
+   AND  FFV.FORM_ID(+)                   =  FFF.FORM_ID
+   AND  FME.LANGUAGE(+)                  =  'US'
+   AND  FFF.FUNCTION_ID(+)               =  MND.M_FUNCTION_ID
+   AND  LPAD(MND.M_LEVEL,MND.M_LEVEL)    = '1'
+   order by FMS1.MENU_NAME,MND.M_ENTRY_SEQUENCE;

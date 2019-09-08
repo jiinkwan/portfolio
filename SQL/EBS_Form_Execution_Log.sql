@@ -1,0 +1,14 @@
+SELECT FM.FORM_NAME,
+       CEI.USER_ID,
+       CEI.EXECUTE_DATE,
+       CEI.EXE_RESP_ID,
+       FU.USER_NAME,
+       FR.RESPONSIBILITY_NAME,
+       FM.USER_FORM_NAME
+  FROM CBO_EXECUTION_INFO    CEI,
+       FND_USER              FU,
+       FND_RESPONSIBILITY_VL FR,
+       FND_FORM_VL FM
+WHERE cei.user_id = fu.USER_ID
+AND   CEI.Exe_Resp_Id = fr.RESPONSIBILITY_ID
+AND   cei.form_name = fm.FORM_NAME;
