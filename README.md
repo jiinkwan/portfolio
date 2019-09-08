@@ -9,5 +9,5 @@ This document is to demonstrate the acquired skill-sets.
     2. Presentation available: [Word prediction application presentation](https://rpubs.com/jiinkwan/479875)
     3. Application URL: [Word prediction shiny application](https://jinkwanh.shinyapps.io/Capstone/)
     4. Data Source: [Coursera-SwiftKey](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip)
-4. SQL 
+4. SQL Scripts for Oracle EBS and other systems
 
