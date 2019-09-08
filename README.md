@@ -2,7 +2,7 @@
 
 This document is to demonstrate the acquired skill-sets.
 
-1. [Data Analytics/Funnel Data Cleansing.ipynb: Freelancer / Client Matching Service Funnel Data Cleaning](https://github.com/jiinkwan/portfolio/blob/master/Data%20Analytics/Funnel%20Data%20Cleaning.html)
+1. [Data Analytics/Funnel Data Cleansing.ipynb: Freelancer / Client Matching Service Funnel Data Cleaning](https://github.com/jiinkwan/portfolio/blob/master/Data%20Analytics/Funnel%20Data%20Cleaning.ipynb)
 2. Data Analytics/Diet Coach.ipynb: Diet Coaching Application Data Cleansing
 3. Word Prediction with NLTK package and Shiny (R)
     1. method: n_gram and Kneser-KenySmoothing
