@@ -10,4 +10,19 @@ This document is to demonstrate the acquired skill-sets.
     3. Application URL: [Word prediction shiny application](https://jinkwanh.shinyapps.io/Capstone/)
     4. Data Source: [Coursera-SwiftKey](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip)
 4. SQL Scripts for Oracle EBS and other systems
+5. Course Applied Data Science Specialization
+    1. [Bligh Tax Prediction Model](https://github.com/jiinkwan/portfolio/blob/master/Applied%20Data%20Science%20Specialization/Machine%20Learning/Blight%20Tax%20Payment%20Prediction.ipynb)
+        - Classification Problem
+        - Who unlikely pay their blight tax in Michigan?
+        - Algorithm: Random Forest
+        - It turns out the most relevant features are fine amount and judgment amount
+        - The result indicates that, if we were to encourage people to pay the fine, we might consider giving them discount
+    2. Text Mining with NLTK package
+        - Topic modeling through document_path_similarity, similarity score, and Latent Dirichlet Allocation
+    3. [Social Network Analysis with NetworkX package](https://github.com/jiinkwan/portfolio/blob/master/Applied%20Data%20Science%20Specialization/Social%20Network%20Analysis/Connetion%20Prediction.ipynb)
+        - Classification Problem
+        - How likely each unconnected node would connect in the future
+        - Algorithm: Random Forest
+        - Evaluation Methods: Preferential Attachment, Jaccard Coefficient, Resource Allocation Index
+        - Used three different method to evaluate the how likely specific edge will be created
 
