@@ -25,4 +25,12 @@ This document is to demonstrate the acquired skill-sets.
         - Algorithm: Random Forest
         - Evaluation Methods: Preferential Attachment, Jaccard Coefficient, Resource Allocation Index
         - Used three different method to evaluate the how likely specific edge will be created
+6. [Titanic: Machine Learning from Disater](https://github.com/jiinkwan/portfolio/blob/master/Case%20Study/Titanic/Titanic%20Survivor%20Analysis.ipynb)
+    1. Predicting survival on Titanic incident
+    2. Evaluation: Simple Accuracy
+    
 
+7. Profitable Application Profile
+   1. Explore iOS and Android application market
+   2. What are the most used application category? What they are in common
+   3. The result could be used on the next application development and change the strategy accordingly based on it
